@@ -17,7 +17,7 @@ servicedir       = $(datadir)/dbus-1/services
 service_in_files = org.mate.panel.applet.UniversityPythonAppletFactory.service.in
 service_DATA     = $(service_in_files:.service.in=.service)
 
-org.mate.panel.applet.UniversityPythonAppletFactory.service: $(service_in_files)
+org.mate.panel.applet.UniversityPythonAppletFactory.service: $(service_in_files) Makefile
 	$(AM_V_GEN)sed \
 		-e "s|\@LOCATION\@|$(APPLET_LOCATION)|" \
 		$< > $@
